@@ -1,0 +1,220 @@
+#productList,#actProductList,#actTypeList{
+  height: @productHeight;
+  overflow-x: hidden;
+}
+@media (min-width:1600px) {
+
+  #productList, #actProductList,#actTypeList {
+    height: @productHeight *1.1;
+  }
+}
+@media (min-width:1900px){
+
+  #productList,#actProductList {
+    height: @productHeight *1.3;
+  }
+}
+//商品
+.product,.product-row{
+    position: relative;
+    padding-top: 0;
+    padding: @gutter;
+    .clearfix();
+    border-radius: 5px !important;
+    box-shadow: 0 0 10px #cccccc  !important;
+  //商品
+  .item{
+    &.picked{
+      border: solid @themeColor 1px;
+    }
+    .animated(opacityShow);
+    height: auto; position: relative;  margin-top:@gutter;
+    border:  @borderStyle; border-radius: 3px;
+    background-size:100%;
+    .clearfix();
+    .item-cd{
+      position: absolute; left:@gutter/2; top: @gutter/2; z-index:999;
+      color: @color;
+    }
+    .cc{width: 100%; padding-top: 100%;
+      position: relative;
+      border-radius: 5px;
+      background:#ffffff  url('@{imgPath}/lazyload.png') 50% 50% no-repeat;
+      background-size:cover;
+      .photo{
+        position: absolute;
+        top:0;
+        background-size:cover;
+        width: 100%;
+        height: 100%;
+        background-position: center center;
+      }
+      .txt{width: 100%; height: 30px; background: rgba(0,0,0,0.5);
+        .norow();
+        padding: 5px 10px;
+        z-index:10;
+        bottom:0; position: absolute; line-height: 20px;
+        .iconfont{
+          font-size: 12px;
+          line-height: 20px;
+          text-decoration: none;
+        }
+        .icon-liebiao{
+          font-size: 14px;
+          line-height: 22px;
+        }
+
+        color: #ffffff;
+        .info{
+          display:inline-block;
+        }
+        .price{color:#ffffff; }
+        .stock{margin-left: 10px; color: #ffffff;}
+        .item-icon-btn{
+          background:@themeColor ;
+          padding:0px 4px;
+          border-radius: 5px;
+          position:relative;z-index: 99;   display:inline-block; margin-left: @gutter/4; margin-right: @gutter/4;  color: #ffffff;}
+        }
+        .item-icon-btn.points{
+          position: absolute;
+        }
+
+    }
+
+    .tt{
+
+      width: 100%;  position: relative;
+      padding-left: @gutter/2;
+      padding-right: @gutter/2;
+      z-index:10;
+      font-size: 12px;
+      position:relative;height:25px; line-height:25px; font-size:12px;
+      .norow();
+    }
+  }
+
+  //活动盒子
+  .act-box{
+
+    width: 200px;
+    height: 200px;
+    top:50%;
+    margin-top: -100px;
+    color: #fff;
+    right: 0;
+    z-index:30;
+    position: absolute;
+    background: url('@{imgPath}/redBg.png') no-repeat;
+    background-size:cover;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+    dt{
+      line-height: 30px;
+      font-size: 12px;
+    }
+    dd{
+      line-height: 30px;
+      font-size: 12px;
+      &.dd1{
+        line-height: 1.5;
+        font-size: 24px;
+        margin-top: @gutter/2;
+        font-weight: normal;
+      }
+      &.dd2{
+        line-height: 1.5;
+        font-size: 20px;
+      }
+      &.dd3{
+        cursor: pointer;
+         border: solid 1px #ffffff;
+         background: @themeColor;
+         width: 60%;
+         height: 50px;
+         border-radius: 5px;
+         margin: @gutter/2 auto;
+         padding-top: 5px;
+         small,em{
+           font-size: 12px;
+           display:block;
+           line-height: 20px;
+         }
+         em{
+          font-size: 14px;
+         }
+      }
+      &.dd4{
+        cursor: pointer;
+        margin-top: 0;
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+      }
+    }
+    &.overline{
+      background: url('@{imgPath}/greenBg.png') no-repeat;
+      & dd.dd3{
+          background: @green;
+      }
+    }
+  }
+
+}
+
+//活动导航
+.act-type{
+  margin-top: @gutter;
+  a{
+    background: #e8e9f1;
+    color: #333333;
+    padding: 6px 24px;
+    &.selected{
+      .btn-primary;
+    }
+    font-size: 12px;
+  }
+
+}
+
+.productlist-footer{
+  clear: both;
+  margin-top: @gutter;
+}
+
+#actProductList .product-row {
+    position: relative;
+    padding-top: 0;
+    padding: 12px;
+    border-radius: 5px !important;
+    box-shadow: 0 0 10px #cccccc !important;
+    margin:12px 0;
+    overflow-y:hidden;
+
+    .item {
+      //-webkit-animation:none;
+      //animation:none;
+    }
+    //商品
+    .act-col {
+      display: inline-block;
+      float: none;
+
+    }
+    .act-ul{
+
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow-y: hidden;
+
+      padding-right: 200px;
+
+    }
+    .act-col:nth-child(1),.act-col:nth-child(2),.act-col:nth-child(3),.act-col:nth-child(4),.act-col:nth-child(5),.act-col:nth-child(6){
+      //display: block;
+    }
+
+}
+
+

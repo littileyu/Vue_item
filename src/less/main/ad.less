@@ -1,0 +1,63 @@
+/*!ad*/
+.ad{
+    .el-upload-list{
+
+       .el-upload-list__item{
+             width: 240px;
+             height: 180px;
+             line-height: 180px;
+             margin:20px 30px;
+            .el-upload-list__item-status-label i{
+               position: absolute; top:12px;
+              left:12px;
+              margin-top:0px;
+             }
+        }
+
+      .el-upload-list__item-name{
+        display: block;
+        color: #ffffff;
+        position: absolute;
+        line-height: 40px;
+        bottom: 0;
+        text-shadow: 0 0 1px #333333;
+      }
+      .el-upload-list__item-name [class^=el-icon]{
+        color: #ffffff;
+      }
+    }
+
+   .el-upload--picture-card{
+        width: 240px;
+        height: 180px;
+        line-height: 180px;
+         margin:20px 40px;
+
+    }
+    .ad-main{
+        background-color:#ffffff;
+        border-left: @borderDashedStyle;
+        border-right: @borderDashedStyle;
+    }
+   .gallery-btn-row{
+        height: 55px;
+       .gallery-btn{
+           margin-top: 10px;
+           margin-left: 10px;
+           width: 80px;
+           text-align: center;
+            display: inline-block;
+       }
+       .gallery-ok{
+           .diy-btn(#ffffff,@green,@radius:30px);
+       }
+      .gallery-empty{
+          .diy-btn(#333333,#e5e5e5,@radius:30px);
+      }
+   }
+    .gallery{
+        padding:@gutter;
+        height:600px;
+
+    }
+}
